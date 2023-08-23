@@ -1,0 +1,11 @@
+# **DO NOT MODIFY**
+
+export COURSE := OS2021
+URL := 'http://jyywiki.cn'
+
+submit:
+	@cd $(dir $(abspath $(lastword $(MAKEFILE_LIST)))) && \
+	  curl -sSL '$(URL)/static/submit.sh' | bash
+
+git:
+	@sync
